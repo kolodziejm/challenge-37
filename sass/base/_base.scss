@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 50%; // 8px
+
+  @media only screen and (min-width: $tablet-sm) { // 600px
+    font-size: 56%;
+  } 
+
+  @media only screen and (min-width: $tablet-lg) { // 900px
+    font-size: 59%;
+  }
+
+  @media only screen and (min-width: $desktop) { // 1200px
+    font-size: 62.5%; // 10px
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: $color-grey-1;
+  box-sizing: border-box;
+  overflow-x: hidden; 
+}

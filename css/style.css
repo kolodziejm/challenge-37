@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 50%; }
+  @media only screen and (min-width: 37.5em) {
+    html {
+      font-size: 56%; } }
+  @media only screen and (min-width: 56.25em) {
+    html {
+      font-size: 59%; } }
+  @media only screen and (min-width: 75em) {
+    html {
+      font-size: 62.5%; } }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #6a6a6a;
+  box-sizing: border-box;
+  overflow-x: hidden; }
