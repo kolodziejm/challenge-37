@@ -23,3 +23,81 @@ body {
   color: #6a6a6a;
   box-sizing: border-box;
   overflow-x: hidden; }
+
+.nav {
+  background-color: transparent;
+  position: fixed;
+  z-index: 1000; }
+  .nav__brand {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.43); }
+  .nav__hamburger {
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    width: 4rem;
+    height: .5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+    z-index: 1000; }
+    .nav__hamburger--active .nav__hamburger__line {
+      margin: 0; }
+      .nav__hamburger--active .nav__hamburger__line:first-of-type {
+        transform: translateY(6px) rotate(45deg); }
+      .nav__hamburger--active .nav__hamburger__line:nth-of-type(2) {
+        opacity: 0; }
+      .nav__hamburger--active .nav__hamburger__line:last-of-type {
+        transform: translateY(-12px) rotate(-45deg); }
+    .nav__hamburger__line {
+      display: block;
+      width: 100%;
+      height: .5rem;
+      border-radius: 20px;
+      background-color: #e7e7e6;
+      transition: all .3s; }
+      .nav__hamburger__line:not(:last-child) {
+        margin-bottom: .6rem; }
+  .nav__mobile__list {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: -999px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+    opacity: 0;
+    z-index: -1000;
+    transition: all .2s ease-in-out; }
+    .nav__mobile__list--active {
+      opacity: .95;
+      z-index: 100;
+      top: 0px; }
+      .nav__mobile__list--active .nav__mobile__item {
+        display: block; }
+  .nav__mobile__item {
+    margin-bottom: 5rem;
+    display: none; }
+  .nav__mobile__link {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    color: #e7e7e6;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center; }
+  .nav__mobile__icons {
+    display: flex;
+    align-items: center; }
+  .nav__mobile__facebook {
+    margin-right: 3rem; }
+
+.hero {
+  background: url("../assets/images/hero-bg.png") no-repeat center;
+  height: 100vh; }
