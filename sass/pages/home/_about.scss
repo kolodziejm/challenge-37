@@ -1,0 +1,25 @@
+.about {
+  padding: 10rem 1rem 5rem 1rem;
+
+  @media only screen and (min-width: $tablet-sm) {
+    background: url('../assets/images/rect-about.png') no-repeat top right;
+    background-size: 330px 210px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    display: block;
+    max-width: 350px;
+    margin-top: 5rem;
+
+    @media only screen and (min-width: $tablet-sm) {
+      max-width: 600px;
+    }
+  }
+}
