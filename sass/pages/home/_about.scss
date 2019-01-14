@@ -13,6 +13,10 @@
     align-items: center;
   }
 
+  &__text-box {
+    max-width: 480px; 
+  }
+
   &__image {
     display: block;
     max-width: 350px;

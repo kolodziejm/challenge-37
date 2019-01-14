@@ -1,0 +1,53 @@
+.features {
+  padding: 8rem 1rem 10rem 1rem;
+  background-color: $color-white;
+
+  @media only screen and (min-width: $tablet-lg) {
+    background: url('../assets/images/features-bg-left.svg') no-repeat left;
+  }
+
+  .section-title {
+    margin-bottom: 6rem; 
+  }
+
+  &__container {
+
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: $tablet-lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media only screen and (min-width: 87.5em) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    margin-bottom: 3rem;
+    max-width: 372px;
+    display: flex;
+    align-items: flex-start;
+
+    @media only screen and (min-width: $tablet-lg) {
+      margin-right: 2rem;
+    }
+
+    &__text-box {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__icon {
+    margin-right: 1.5rem;
+  }
+}
