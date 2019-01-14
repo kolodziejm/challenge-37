@@ -24,6 +24,19 @@ body {
   box-sizing: border-box;
   overflow-x: hidden; }
 
+.btn {
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.8rem 3rem;
+  border-radius: 200px;
+  text-transform: uppercase; }
+  .btn--white {
+    background-color: #fff;
+    color: #242424; }
+
 .nav {
   background-color: transparent;
   position: fixed;
@@ -39,7 +52,6 @@ body {
     top: 3rem;
     left: 3rem;
     width: 4rem;
-    height: .5rem;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -94,28 +106,48 @@ body {
     text-align: center; }
   .nav__mobile__icons {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
   .nav__mobile__facebook {
     margin-right: 3rem; }
 
 .hero {
   background: url("../assets/images/hero-bg.png") no-repeat center;
   background-size: cover;
-  height: 100vh; }
+  height: 91vh; }
   .hero__container {
     display: flex;
     flex-direction: column; }
+  .hero__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem; }
+    @media only screen and (min-width: 37.5em) {
+      .hero__main {
+        margin-bottom: 0; } }
   .hero__text-box {
     margin-top: 10rem;
     text-align: center;
     background: url("../assets/images/hero-text-bg.png") center;
     -webkit-text-fill-color: rgba(255, 255, 255, 0.43);
-    -webkit-background-clip: text; }
+    -webkit-background-clip: text;
+    margin-bottom: 3rem; }
   .hero__heading {
     font-family: 'LemonMilk bold', sans-serif;
     text-transform: uppercase;
     font-size: 6.5rem;
-    color: transparent; }
+    color: transparent;
+    line-height: .84; }
     .hero__heading--big {
       font-size: 8rem;
       display: block; }
+  .hero__image {
+    display: block;
+    margin: 0 auto;
+    height: 410px;
+    max-width: 400px; }
+    @media only screen and (min-width: 22em) {
+      .hero__image {
+        height: 450px; } }
