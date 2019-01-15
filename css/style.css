@@ -319,3 +319,8 @@ body {
   .work .paragraph {
     max-width: 290px;
     margin: 0 auto 6rem auto; }
+
+.team {
+  padding: 8rem 10rem 8rem 10rem; }
+  .team__list {
+    list-style: none; }
