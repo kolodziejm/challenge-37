@@ -1,0 +1,117 @@
+.work {
+  padding: 8rem 1rem 20rem 1rem;
+
+  &__container {
+
+  }
+
+  &__content {
+
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  &__text-box {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__list {
+    list-style: none;
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    max-width: 460px;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $desktop) {
+      margin: 0;
+      height: 300px;
+      width: 460px;
+
+      &:not(:last-child) {
+        margin-right: -120px;
+      }
+    }
+
+    &__image {
+      position:absolute;
+      top: 0;
+      left: 0;
+      z-index:0;
+      width: 100%;
+      height: 100%;
+      margin-left: -30px;
+
+      &--last {
+        margin-left: -50px;
+      }
+    }
+
+    &__content {
+      z-index: 3;
+      position: absolute;
+      left: 15%;
+      top: 30%;
+
+      &--last {
+        left: 25%;
+        top: 35%;
+      }
+
+      @media only screen and (min-width: 22em) {
+        left: 20%;
+
+        &--last {
+          left: 35%;
+          top: 35%;
+        }
+      }
+    }
+
+    &__header, &__number {
+      font-family: 'Lato', sans-serif;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &__header {
+      font-size: 3.8rem;
+    }
+
+    &__number {
+      font-size: 5.7rem;
+      position: absolute;
+      right: 23%;
+      top: 10%;
+    }
+
+    &__desc {
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 30px;
+      max-width: 150px;
+
+      @media only screen and (min-width: $tablet-sm) {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .paragraph {
+    max-width: 290px;
+    margin: 0 auto 6rem auto;
+  }
+}
