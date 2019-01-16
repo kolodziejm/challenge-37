@@ -342,6 +342,15 @@ body {
         margin-left: 1rem; } }
 
 .team {
-  padding: 8rem 10rem 8rem 10rem; }
+  padding: 8rem 1rem 8rem 1rem;
+  background-color: #f5f5f5; }
+  .team__container {
+    max-width: 1400px;
+    margin: 0 auto; }
   .team__list {
     list-style: none; }
+  .team__image {
+    border: 1.8rem solid #fff;
+    transform: rotate(45deg); }
+    .team__image__container {
+      position: relative; }
