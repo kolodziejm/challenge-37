@@ -249,6 +249,9 @@ body {
   padding: 8rem 1rem 20rem 1rem; }
   @media only screen and (min-width: 75em) {
     .work {
+      padding-left: 5rem; } }
+  @media only screen and (min-width: 93.75em) {
+    .work {
       padding-left: 20rem; } }
   @media only screen and (min-width: 75em) {
     .work__content {
@@ -264,6 +267,9 @@ body {
     @media only screen and (min-width: 75em) {
       .work__text-box {
         text-align: left;
+        margin-right: 2rem; } }
+    @media only screen and (min-width: 93.75em) {
+      .work__text-box {
         margin-right: 8rem; } }
   .work__list {
     list-style: none; }
@@ -281,6 +287,9 @@ body {
       .work__item {
         margin: 0;
         height: 280px;
+        width: 260px; } }
+    @media only screen and (min-width: 93.75em) {
+      .work__item {
         width: 330px; } }
     .work__item--1:before, .work__item--2:before, .work__item--3:before {
       content: "";
@@ -349,6 +358,8 @@ body {
     margin: 0 auto; }
   .team__list {
     list-style: none; }
+  .team__carousel {
+    display: flex; }
   .team__image {
     border: 1.8rem solid #fff;
     transform: rotate(45deg); }

@@ -3,6 +3,10 @@
   padding: 8rem 1rem 20rem 1rem;
 
   @media only screen and (min-width: $desktop) {
+    padding-left: 5rem;
+  }
+
+  @media only screen and (min-width: 93.75em) {
     padding-left: 20rem;
   }
 
@@ -29,6 +33,10 @@
 
     @media only screen and (min-width: $desktop) {
       text-align: left;
+      margin-right: 2rem;
+    }
+
+    @media only screen and (min-width: 93.75em) {
       margin-right: 8rem;
     }
   }
@@ -52,6 +60,10 @@
     @media only screen and (min-width: $desktop) {
       margin: 0;
       height: 280px;
+      width: 260px;
+    }
+
+    @media only screen and (min-width: 93.75em) {
       width: 330px;
     }
 
