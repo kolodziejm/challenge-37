@@ -247,11 +247,24 @@ body {
 
 .work {
   padding: 8rem 1rem 20rem 1rem; }
+  @media only screen and (min-width: 75em) {
+    .work {
+      padding-left: 20rem; } }
+  @media only screen and (min-width: 75em) {
+    .work__content {
+      display: flex; } }
   .work .section-title {
     text-align: center; }
+    @media only screen and (min-width: 75em) {
+      .work .section-title {
+        text-align: left; } }
   .work__text-box {
     text-align: center;
     margin-bottom: 3rem; }
+    @media only screen and (min-width: 75em) {
+      .work__text-box {
+        text-align: left;
+        margin-right: 8rem; } }
   .work__list {
     list-style: none; }
     @media only screen and (min-width: 75em) {
@@ -260,40 +273,40 @@ body {
   .work__item {
     position: relative;
     overflow: hidden;
-    min-height: 300px;
-    max-width: 460px;
-    margin: 0 auto; }
+    min-height: 280px;
+    max-width: 330px;
+    margin: 0 auto 3rem;
+    transform: skew(-30deg, 0); }
     @media only screen and (min-width: 75em) {
       .work__item {
         margin: 0;
-        height: 300px;
-        width: 460px; }
-        .work__item:not(:last-child) {
-          margin-right: -120px; } }
-    .work__item__image {
+        height: 280px;
+        width: 330px; } }
+    .work__item--1:before, .work__item--2:before, .work__item--3:before {
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      width: 100%;
       height: 100%;
-      margin-left: -30px; }
-      .work__item__image--last {
-        margin-left: -50px; }
+      width: 100%;
+      top: 0;
+      left: 9%;
+      z-index: -1; }
+    .work__item--1:before {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/step-1.jpg") no-repeat;
+      background-size: cover; }
+    .work__item--2:before {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/step-2.jpg") no-repeat;
+      background-size: cover; }
+    .work__item--3:before {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/step-3.jpg") no-repeat;
+      background-size: cover; }
     .work__item__content {
-      z-index: 3;
+      transform: skew(30deg, 0);
       position: absolute;
-      left: 15%;
-      top: 30%; }
-      .work__item__content--last {
-        left: 25%;
-        top: 35%; }
-      @media only screen and (min-width: 22em) {
+      top: 30%;
+      left: 25%; }
+      @media only screen and (min-width: 37.5em) {
         .work__item__content {
-          left: 20%; }
-          .work__item__content--last {
-            left: 35%;
-            top: 35%; } }
+          top: 45%; } }
     .work__item__header, .work__item__number {
       font-family: 'Lato', sans-serif;
       color: #fff;
@@ -303,9 +316,13 @@ body {
       font-size: 3.8rem; }
     .work__item__number {
       font-size: 5.7rem;
+      transform: skew(30deg, 0);
       position: absolute;
-      right: 23%;
-      top: 10%; }
+      top: 5%;
+      right: 30%; }
+      @media only screen and (min-width: 37.5em) {
+        .work__item__number {
+          right: 10%; } }
     .work__item__desc {
       font-family: 'Open Sans', sans-serif;
       color: #fff;
@@ -315,10 +332,14 @@ body {
       max-width: 150px; }
       @media only screen and (min-width: 37.5em) {
         .work__item__desc {
-          max-width: 200px; } }
+          max-width: 210px; } }
   .work .paragraph {
     max-width: 290px;
     margin: 0 auto 6rem auto; }
+    @media only screen and (min-width: 75em) {
+      .work .paragraph {
+        width: 29rem;
+        margin-left: 1rem; } }
 
 .team {
   padding: 8rem 10rem 8rem 10rem; }

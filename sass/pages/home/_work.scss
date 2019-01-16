@@ -1,21 +1,36 @@
+// REWRITE WITH NEW ASSETS!!!!
 .work {
   padding: 8rem 1rem 20rem 1rem;
+
+  @media only screen and (min-width: $desktop) {
+    padding-left: 20rem;
+  }
 
   &__container {
 
   }
 
   &__content {
-
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+    }
   }
 
   .section-title {
     text-align: center;
+    @media only screen and (min-width: $desktop) {
+      text-align: left;
+    }
   }
 
   &__text-box {
     text-align: center;
     margin-bottom: 3rem;
+
+    @media only screen and (min-width: $desktop) {
+      text-align: left;
+      margin-right: 8rem;
+    }
   }
 
   &__list {
@@ -29,52 +44,50 @@
   &__item {
     position: relative;
     overflow: hidden;
-    min-height: 300px;
-    max-width: 460px;
-    margin: 0 auto;
+    min-height: 280px;
+    max-width: 330px;
+    margin: 0 auto 3rem;
+    transform: skew(-30deg, 0);
 
     @media only screen and (min-width: $desktop) {
       margin: 0;
-      height: 300px;
-      width: 460px;
-
-      &:not(:last-child) {
-        margin-right: -120px;
-      }
+      height: 280px;
+      width: 330px;
     }
 
-    &__image {
-      position:absolute;
-      top: 0;
-      left: 0;
-      z-index:0;
-      width: 100%;
+    &--1:before, &--2:before, &--3:before {
+      content: "";
+      position: absolute;
       height: 100%;
-      margin-left: -30px;
+      width: 100%;
+      top: 0;
+      left: 9%;
+      z-index: -1;
+    }
 
-      &--last {
-        margin-left: -50px;
-      }
+    &--1:before {
+      background: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url('../assets/images/step-1.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    &--2:before {
+      background: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url('../assets/images/step-2.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    &--3:before {
+      background: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url('../assets/images/step-3.jpg') no-repeat;
+      background-size: cover;
     }
 
     &__content {
-      z-index: 3;
+      transform: skew(30deg, 0);
       position: absolute;
-      left: 15%;
       top: 30%;
+      left: 25%;
 
-      &--last {
-        left: 25%;
-        top: 35%;
-      }
-
-      @media only screen and (min-width: 22em) {
-        left: 20%;
-
-        &--last {
-          left: 35%;
-          top: 35%;
-        }
+      @media only screen and (min-width: $tablet-sm) {
+        top: 45%;
       }
     }
 
@@ -91,9 +104,14 @@
 
     &__number {
       font-size: 5.7rem;
+      transform: skew(30deg, 0);
       position: absolute;
-      right: 23%;
-      top: 10%;
+      top: 5%;
+      right: 30%;
+
+      @media only screen and (min-width: $tablet-sm) {
+        right: 10%;
+      }
     }
 
     &__desc {
@@ -105,7 +123,7 @@
       max-width: 150px;
 
       @media only screen and (min-width: $tablet-sm) {
-        max-width: 200px;
+        max-width: 210px;
       }
     }
   }
@@ -113,5 +131,10 @@
   .paragraph {
     max-width: 290px;
     margin: 0 auto 6rem auto;
+
+    @media only screen and (min-width: $desktop) {
+      width: 29rem;
+      margin-left: 1rem;
+    }
   }
 }
