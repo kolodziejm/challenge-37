@@ -3,8 +3,7 @@
   background-color:  #f5f5f5;
 
   &__container {
-    max-width: 1400px;
-    margin: 0 auto;
+    position: relative;
   }
 
   &__list {
@@ -13,18 +12,142 @@
 
   &__carousel {
     display: flex;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   &__item {
+    position: absolute;
+    transition: all .5s ease-in-out;
 
+    &__desc {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -25px;
+    }
+
+    &__heading {
+      transform: skew(-45deg);
+      text-align: center;
+
+      &-container {
+        background-color: $color-black-3;
+        color: $color-white;
+        font-size: 2.1rem;
+        font-weight: 700;
+        transform: skew(45deg);
+        padding: 1.2rem 5rem;
+      }
+    }
+
+    &__subheading {
+      text-align: center;
+      transform: skew(-45deg);
+      max-width: 17rem;
+
+      &-container {
+        transition: all .5s ease-in-out;
+        margin-left: 3rem;
+        margin-bottom: 2rem;
+        background-color: $color-primary;
+        color: $color-white;
+        font-size: 1.8rem;
+        font-style: italic;
+        transform: skew(45deg);
+        padding: .5rem 3rem;
+      }
+    }
+
+    &--left {
+      opacity: 0;
+      @media only screen and (min-width: $tablet-lg) {
+        opacity: 0.43;
+      }
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%) scale(.75);
+    }
+
+    &--right, &--hidden, &--left {
+      .team__item__subheading-container {
+        opacity: 0;
+      }
+    }
+
+    &--center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      z-index: 5;
+    }
+
+    &--right {
+      opacity: 0;
+      @media only screen and (min-width: $tablet-lg) {
+        opacity: 0.43;
+      }
+      top: 50%;
+      left: 100%;
+      transform: translate(-100%, -50%) scale(.75);
+    }
+
+    &--hidden {
+      // opacity: 0;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(.75);
+    }
   }
 
   &__image {
-    border: 1.8rem solid #fff;
+    background-position: center;
+    width: 45rem;
+    height: 45rem;
+    margin: -75px;
     transform: rotate(45deg);
 
-    &__container {
-      position: relative;
+    &__wrapper {
+      width: 30rem;
+      height: 30rem;
+      transform: rotate(-45deg);
+      overflow: hidden;
+      border: 1.8rem solid #fff;
+    }
+
+    &--1 {
+      background: url('../assets/images/jimmy-doe.jpg') no-repeat;
+    }
+
+    &--2 {
+      background: url('../assets/images/jessica-doe.jpg') no-repeat;
+    }
+
+    &--3 {
+      background: url('../assets/images/jinny-snow.jpg') no-repeat;
+    }
+
+    &--4 {
+      background: url('../assets/images/john-doe.jpg') no-repeat;
+    }
+  }
+
+  &__navigation {
+
+    &__arrow-left {
+      float: left;
+      height: 100%;
+      cursor: pointer
+    }
+
+    &__arrow-right {
+      float: right;
+      cursor: pointer
     }
   }
 }

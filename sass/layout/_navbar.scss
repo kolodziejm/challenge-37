@@ -27,7 +27,7 @@
       .nav__hamburger__line {
         margin: 0;
         &:first-of-type {
-          transform: translateY(6px) rotate(45deg);
+          transform: translateY(11px) rotate(-45deg);
         }
 
         &:nth-of-type(2) {
@@ -35,7 +35,7 @@
         }
 
         &:last-of-type {
-          transform: translateY(-12px) rotate(-45deg);
+          transform: translateY(-11px) rotate(45deg);
         }
       }
     }

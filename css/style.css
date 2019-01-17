@@ -101,11 +101,11 @@ body {
     .nav__hamburger--active .nav__hamburger__line {
       margin: 0; }
       .nav__hamburger--active .nav__hamburger__line:first-of-type {
-        transform: translateY(6px) rotate(45deg); }
+        transform: translateY(11px) rotate(-45deg); }
       .nav__hamburger--active .nav__hamburger__line:nth-of-type(2) {
         opacity: 0; }
       .nav__hamburger--active .nav__hamburger__line:last-of-type {
-        transform: translateY(-12px) rotate(-45deg); }
+        transform: translateY(-11px) rotate(45deg); }
     .nav__hamburger__line {
       display: block;
       width: 100%;
@@ -354,14 +354,101 @@ body {
   padding: 8rem 1rem 8rem 1rem;
   background-color: #f5f5f5; }
   .team__container {
-    max-width: 1400px;
-    margin: 0 auto; }
+    position: relative; }
   .team__list {
     list-style: none; }
   .team__carousel {
-    display: flex; }
+    display: flex;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto; }
+  .team__item {
+    position: absolute;
+    transition: all .5s ease-in-out; }
+    .team__item__desc {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -25px; }
+    .team__item__heading {
+      transform: skew(-45deg);
+      text-align: center; }
+      .team__item__heading-container {
+        background-color: #252525;
+        color: #f5f5f5;
+        font-size: 2.1rem;
+        font-weight: 700;
+        transform: skew(45deg);
+        padding: 1.2rem 5rem; }
+    .team__item__subheading {
+      text-align: center;
+      transform: skew(-45deg);
+      max-width: 17rem; }
+      .team__item__subheading-container {
+        transition: all .5s ease-in-out;
+        margin-left: 3rem;
+        margin-bottom: 2rem;
+        background-color: #bc2e3a;
+        color: #f5f5f5;
+        font-size: 1.8rem;
+        font-style: italic;
+        transform: skew(45deg);
+        padding: .5rem 3rem; }
+    .team__item--left {
+      opacity: 0;
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%) scale(0.75); }
+      @media only screen and (min-width: 56.25em) {
+        .team__item--left {
+          opacity: 0.43; } }
+    .team__item--right .team__item__subheading-container, .team__item--hidden .team__item__subheading-container, .team__item--left .team__item__subheading-container {
+      opacity: 0; }
+    .team__item--center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      z-index: 5; }
+    .team__item--right {
+      opacity: 0;
+      top: 50%;
+      left: 100%;
+      transform: translate(-100%, -50%) scale(0.75); }
+      @media only screen and (min-width: 56.25em) {
+        .team__item--right {
+          opacity: 0.43; } }
+    .team__item--hidden {
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.75); }
   .team__image {
-    border: 1.8rem solid #fff;
+    background-position: center;
+    width: 45rem;
+    height: 45rem;
+    margin: -75px;
     transform: rotate(45deg); }
-    .team__image__container {
-      position: relative; }
+    .team__image__wrapper {
+      width: 30rem;
+      height: 30rem;
+      transform: rotate(-45deg);
+      overflow: hidden;
+      border: 1.8rem solid #fff; }
+    .team__image--1 {
+      background: url("../assets/images/jimmy-doe.jpg") no-repeat; }
+    .team__image--2 {
+      background: url("../assets/images/jessica-doe.jpg") no-repeat; }
+    .team__image--3 {
+      background: url("../assets/images/jinny-snow.jpg") no-repeat; }
+    .team__image--4 {
+      background: url("../assets/images/john-doe.jpg") no-repeat; }
+  .team__navigation__arrow-left {
+    float: left;
+    height: 100%;
+    cursor: pointer; }
+  .team__navigation__arrow-right {
+    float: right;
+    cursor: pointer; }
