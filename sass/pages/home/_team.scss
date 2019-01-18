@@ -4,6 +4,8 @@
 
   &__container {
     position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   &__list {
@@ -13,7 +15,12 @@
   &__carousel {
     position: relative;
     max-width: 940px;
+    height: 225px;
     margin: 0 auto;
+
+    @media only screen and (min-width: $tablet-sm) {
+      height: 45rem;
+    }
   }
 
   &__item {
@@ -39,14 +46,18 @@
         font-size: 2.1rem;
         font-weight: 700;
         transform: skew(45deg);
-        padding: 1.2rem 5rem;
+        padding: .6rem 2.5rem;
+
+        @media only screen and (min-width: $tablet-sm) {
+          padding: 1.2rem 5rem;
+        }
       }
     }
 
     &__subheading {
       text-align: center;
       transform: skew(-45deg);
-      max-width: 17rem;
+      max-width: 15rem;
 
       &-container {
         transition: all .5s ease-in-out;
@@ -57,7 +68,11 @@
         font-size: 1.8rem;
         font-style: italic;
         transform: skew(45deg);
-        padding: .5rem 3rem;
+        padding: .4rem 2.5rem;
+
+        @media only screen and (min-width: $tablet-sm) {
+          padding: .4rem 3.5rem;
+        }
       }
     }
 
@@ -106,17 +121,29 @@
 
   &__image {
     background-position: center;
-    width: 45rem;
-    height: 45rem;
-    margin: -75px;
+    // width / height 45rem na 45rem docelowo
+    height: 225px;
+    margin: -100px; // -75px docelowo
     transform: rotate(45deg);
 
+    @media only screen and (min-width: $tablet-sm) {
+      width: 45rem;
+      height: 45rem;
+      margin: -75px;
+    }
+
     &__wrapper {
-      width: 30rem;
-      height: 30rem;
+      width: 150px; // 30rem na 30rem docelowo
+      height: 150px;
       transform: rotate(-45deg);
       overflow: hidden;
-      border: 1.8rem solid #fff;
+      border: 6px solid #fff; // 1.8rem docelowo
+
+      @media only screen and (min-width: $tablet-sm) {
+        width: 30rem;
+        height: 30rem;
+        border: 1.8rem solid #fff;
+      }
     }
 
     &--1 {
@@ -139,14 +166,25 @@
   &__navigation {
 
     &__arrow-left {
-      float: left;
-      height: 100%;
-      cursor: pointer
+      position: absolute;
+      top: 80%;
+      left: 0%;
+      cursor: pointer;
+
+      @media only screen and (min-width: $desktop) {
+        top: 50%;
+      }
     }
 
     &__arrow-right {
-      float: right;
-      cursor: pointer
+      position: absolute;
+      top: 80%;
+      right: 0%;
+      cursor: pointer;
+
+      @media only screen and (min-width: $desktop) {
+        top: 50%;
+      }
     }
   }
 }
