@@ -121,9 +121,8 @@
 
   &__image {
     background-position: center;
-    // width / height 45rem na 45rem docelowo
     height: 225px;
-    margin: -100px; // -75px docelowo
+    margin: -100px;
     transform: rotate(45deg);
 
     @media only screen and (min-width: $tablet-sm) {
@@ -133,11 +132,11 @@
     }
 
     &__wrapper {
-      width: 150px; // 30rem na 30rem docelowo
+      width: 150px;
       height: 150px;
       transform: rotate(-45deg);
       overflow: hidden;
-      border: 6px solid #fff; // 1.8rem docelowo
+      border: 6px solid #fff;
 
       @media only screen and (min-width: $tablet-sm) {
         width: 30rem;
