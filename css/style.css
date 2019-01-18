@@ -358,9 +358,8 @@ body {
   .team__list {
     list-style: none; }
   .team__carousel {
-    display: flex;
     position: relative;
-    max-width: 1400px;
+    max-width: 940px;
     margin: 0 auto; }
   .team__item {
     position: absolute;
@@ -396,6 +395,8 @@ body {
         font-style: italic;
         transform: skew(45deg);
         padding: .5rem 3rem; }
+    .team__item--right .team__item__subheading-container, .team__item--hidden .team__item__subheading-container, .team__item--left .team__item__subheading-container {
+      opacity: 0; }
     .team__item--left {
       opacity: 0;
       top: 50%;
@@ -404,8 +405,6 @@ body {
       @media only screen and (min-width: 56.25em) {
         .team__item--left {
           opacity: 0.43; } }
-    .team__item--right .team__item__subheading-container, .team__item--hidden .team__item__subheading-container, .team__item--left .team__item__subheading-container {
-      opacity: 0; }
     .team__item--center {
       top: 50%;
       left: 50%;

@@ -11,9 +11,8 @@
   }
 
   &__carousel {
-    display: flex;
     position: relative;
-    max-width: 1400px;
+    max-width: 940px;
     margin: 0 auto;
   }
 
@@ -62,6 +61,12 @@
       }
     }
 
+    &--right, &--hidden, &--left {
+      .team__item__subheading-container {
+        opacity: 0;
+      }
+    }
+
     &--left {
       opacity: 0;
       @media only screen and (min-width: $tablet-lg) {
@@ -70,12 +75,6 @@
       top: 50%;
       left: 0%;
       transform: translateY(-50%) scale(.75);
-    }
-
-    &--right, &--hidden, &--left {
-      .team__item__subheading-container {
-        opacity: 0;
-      }
     }
 
     &--center {
