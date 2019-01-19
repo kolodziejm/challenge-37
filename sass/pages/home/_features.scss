@@ -1,5 +1,5 @@
 .features {
-  padding: 8rem 1rem 10rem 1rem;
+  padding: 8rem 1rem 0rem 1rem;
   background-color: $color-white;
 
   @media only screen and (min-width: $tablet-lg) {
@@ -8,6 +8,10 @@
 
   .section-title {
     margin-bottom: 6rem; 
+
+    @media only screen and (min-width: $desktop) {
+      margin-left: -20rem;
+    }
   }
 
   &__container {
@@ -28,7 +32,7 @@
   }
 
   &__item {
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
     max-width: 372px;
     display: flex;
     align-items: flex-start;

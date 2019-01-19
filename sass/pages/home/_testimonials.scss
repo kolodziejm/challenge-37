@@ -6,12 +6,16 @@
     text-align: center;
 
     @media only screen and (min-width: $desktop) {
-      text-align: left;
-      margin: 0 0 10rem 18rem;
+      margin: 0 0 10rem -50rem;
     }
   }
 
   &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__flex {
     @media only screen and (min-width: $desktop) {
       display: flex;
       justify-content: center;

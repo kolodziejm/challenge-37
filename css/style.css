@@ -222,13 +222,16 @@ body {
         max-width: 600px; } }
 
 .features {
-  padding: 8rem 1rem 10rem 1rem;
+  padding: 8rem 1rem 0rem 1rem;
   background-color: #f5f5f5; }
   @media only screen and (min-width: 56.25em) {
     .features {
       background: url("../assets/images/features-bg-left.svg") no-repeat left; } }
   .features .section-title {
     margin-bottom: 6rem; }
+    @media only screen and (min-width: 75em) {
+      .features .section-title {
+        margin-left: -20rem; } }
   .features__list {
     list-style: none;
     display: flex;
@@ -240,7 +243,7 @@ body {
       .features__list {
         justify-content: flex-start; } }
   .features__item {
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
     max-width: 372px;
     display: flex;
     align-items: flex-start; }
@@ -383,7 +386,7 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: -25px; }
+      margin-top: -15px; }
     .team__item__heading {
       transform: skew(-45deg);
       text-align: center; }
@@ -497,10 +500,12 @@ body {
     text-align: center; }
     @media only screen and (min-width: 75em) {
       .testimonials .section-title {
-        text-align: left;
-        margin: 0 0 10rem 18rem; } }
+        margin: 0 0 10rem -50rem; } }
+  .testimonials__container {
+    max-width: 1200px;
+    margin: 0 auto; }
   @media only screen and (min-width: 75em) {
-    .testimonials__container {
+    .testimonials__flex {
       display: flex;
       justify-content: center;
       align-items: center; } }
