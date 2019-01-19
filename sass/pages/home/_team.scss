@@ -1,6 +1,23 @@
 .team {
   padding: 8rem 1rem 8rem 1rem;
   background-color:  #f5f5f5;
+  position: relative;
+
+  &__triangle {
+    display: none;
+
+    @media only screen and (min-width: $tablet-lg) {
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 250px 0 250px 200px;
+      border-color: transparent transparent transparent #101010;
+      position: absolute;
+      left: 0;
+      top: -30%;
+    }
+  }
 
   &__container {
     position: relative;

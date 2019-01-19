@@ -1,6 +1,29 @@
 // REWRITE WITH NEW ASSETS!!!!
 .work {
   padding: 8rem 1rem 20rem 1rem;
+  position: relative;
+
+  &__triangle {
+    display: none;
+
+    @media only screen and (min-width: $desktop) {
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 400px 800px 400px 0;
+      border-color: transparent $color-primary transparent transparent;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    @media only screen and (min-width: 87.5em) {
+      border-width: 600px 800px 600px 0;
+      top: -30%;
+    }
+  }
 
   @media only screen and (min-width: $desktop) {
     padding-left: 5rem;
@@ -11,7 +34,8 @@
   }
 
   &__container {
-
+    position: relative;
+    z-index: 3;
   }
 
   &__content {

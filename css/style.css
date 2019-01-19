@@ -29,6 +29,8 @@ body {
   color: #494949;
   font-size: 6rem;
   font-weight: 400; }
+  .section-title--grey {
+    color: #9f9f9f; }
 
 .paragraph {
   font-family: 'Open Sans', sans-serif;
@@ -36,6 +38,8 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 3rem; }
+  .paragraph--light {
+    color: #e7e7e6; }
   .paragraph--big {
     font-size: 1.9rem; }
   .paragraph--italic {
@@ -84,6 +88,65 @@ body {
 .container {
   max-width: 1250px;
   margin: 0 auto; }
+
+.footer {
+  background-color: #171717;
+  padding: 7rem 1rem 5rem 1rem; }
+  @media only screen and (min-width: 75em) {
+    .footer {
+      background-image: url("../assets/images/bg-footer.svg");
+      background-repeat: no-repeat;
+      background-position: bottom right; } }
+  .footer__container {
+    max-width: 1180px;
+    margin: 0 auto; }
+  .footer__contact {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem; }
+    @media only screen and (min-width: 56.25em) {
+      .footer__contact {
+        flex-direction: row;
+        justify-content: space-between; } }
+    .footer__contact__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4rem; }
+      .footer__contact__item:nth-child(1) {
+        order: 1; }
+      @media only screen and (min-width: 56.25em) {
+        .footer__contact__item {
+          margin-bottom: 0; }
+          .footer__contact__item:nth-child(1) {
+            order: 0; } }
+    .footer__contact__icon {
+      margin: -1rem 2.5rem 0 0; }
+    .footer__contact__information .paragraph {
+      line-height: 24px; }
+    .footer__contact__heading {
+      color: #e7e7e6;
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem; }
+  .footer__social {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 430px;
+    margin: 0 auto 3rem auto; }
+    .footer__social__link {
+      text-decoration: none; }
+  .footer .legal {
+    padding: 2.5rem 1rem 0 1rem;
+    border-top: 2px solid #6f6f6e;
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto; }
 
 .nav {
   background-color: transparent;
@@ -201,16 +264,28 @@ body {
         height: 450px; } }
 
 .about {
-  padding: 10rem 1rem 5rem 1rem; }
-  @media only screen and (min-width: 37.5em) {
+  padding: 8rem 1rem 5rem 1rem; }
+  @media only screen and (min-width: 75em) {
+    .about {
+      padding-top: 2rem; } }
+  @media only screen and (min-width: 56.25em) {
     .about {
       background: url("../assets/images/rect-about.png") no-repeat top right;
       background-size: 330px 210px; } }
+  @media only screen and (min-width: 75em) {
+    .about {
+      background-size: 825px 710px; } }
+  @media only screen and (min-width: 93.75em) {
+    .about {
+      background-size: 1200px 710px; } }
   .about__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media only screen and (min-width: 75em) {
+      .about__container {
+        flex-direction: row; } }
   .about__text-box {
     max-width: 480px; }
   .about__image {
@@ -220,6 +295,9 @@ body {
     @media only screen and (min-width: 37.5em) {
       .about__image {
         max-width: 600px; } }
+    @media only screen and (min-width: 75em) {
+      .about__image {
+        max-width: 760px; } }
 
 .features {
   padding: 8rem 1rem 0rem 1rem;
@@ -256,13 +334,35 @@ body {
     margin-right: 1.5rem; }
 
 .work {
-  padding: 8rem 1rem 20rem 1rem; }
+  padding: 8rem 1rem 20rem 1rem;
+  position: relative; }
+  .work__triangle {
+    display: none; }
+    @media only screen and (min-width: 75em) {
+      .work__triangle {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 400px 800px 400px 0;
+        border-color: transparent #bc2e3a transparent transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2; } }
+    @media only screen and (min-width: 87.5em) {
+      .work__triangle {
+        border-width: 600px 800px 600px 0;
+        top: -30%; } }
   @media only screen and (min-width: 75em) {
     .work {
       padding-left: 5rem; } }
   @media only screen and (min-width: 93.75em) {
     .work {
       padding-left: 20rem; } }
+  .work__container {
+    position: relative;
+    z-index: 3; }
   @media only screen and (min-width: 75em) {
     .work__content {
       display: flex; } }
@@ -362,7 +462,21 @@ body {
 
 .team {
   padding: 8rem 1rem 8rem 1rem;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  position: relative; }
+  .team__triangle {
+    display: none; }
+    @media only screen and (min-width: 56.25em) {
+      .team__triangle {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 250px 0 250px 200px;
+        border-color: transparent transparent transparent #101010;
+        position: absolute;
+        left: 0;
+        top: -30%; } }
   .team__container {
     position: relative;
     max-width: 1400px;
@@ -495,7 +609,37 @@ body {
 
 .testimonials {
   background-color: #fcfcfc;
-  padding: 8rem 1rem 8rem 1rem; }
+  padding: 8rem 1rem 15rem 1rem;
+  position: relative; }
+  .testimonials__triangle--small {
+    display: none; }
+    @media only screen and (min-width: 56.25em) {
+      .testimonials__triangle--small {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 300px 300px 0;
+        border-color: transparent #101010 transparent transparent;
+        position: absolute;
+        top: 0;
+        right: 0; } }
+  .testimonials__triangle--big {
+    display: none; }
+    @media only screen and (min-width: 75em) {
+      .testimonials__triangle--big {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 500px 0 500px 200px;
+        border-color: transparent transparent transparent #bc2e3a;
+        position: absolute;
+        top: -15%;
+        left: 0; } }
+    @media only screen and (min-width: 100em) {
+      .testimonials__triangle--big {
+        border-width: 500px 0 500px 500px; } }
   .testimonials .section-title {
     text-align: center; }
     @media only screen and (min-width: 75em) {

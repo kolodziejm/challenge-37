@@ -1,9 +1,21 @@
 .about {
-  padding: 10rem 1rem 5rem 1rem;
+  padding: 8rem 1rem 5rem 1rem;
 
-  @media only screen and (min-width: $tablet-sm) {
+  @media only screen and (min-width: $desktop) {
+    padding-top: 2rem;
+  }
+
+  @media only screen and (min-width: $tablet-lg) {
     background: url('../assets/images/rect-about.png') no-repeat top right;
     background-size: 330px 210px;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    background-size: 825px 710px;
+  }
+
+  @media only screen and (min-width: 93.75em) {
+    background-size: 1200px 710px;
   }
 
   &__container {
@@ -11,6 +23,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (min-width: $desktop) {
+      flex-direction: row;
+    }
   }
 
   &__text-box {
@@ -24,6 +40,10 @@
 
     @media only screen and (min-width: $tablet-sm) {
       max-width: 600px;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      max-width: 760px;
     }
   }
 }
