@@ -3,3 +3,4 @@ package-lock.json
 
 css/style.comp.css
 css/style.prefix.css
+css/style.concat.css
