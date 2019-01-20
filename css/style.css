@@ -77,7 +77,11 @@ body {
   text-align: center;
   padding: 1.2rem 3rem;
   border-radius: 200px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: all .3s ease-in-out; }
+  .btn:hover {
+    background-color: #424240;
+    color: #e7e7e6; }
   .btn--white {
     background-color: #fff;
     color: #242424; }
@@ -151,16 +155,53 @@ body {
 .nav {
   background-color: transparent;
   position: fixed;
-  z-index: 1000; }
+  z-index: 1000;
+  width: 100%;
+  height: 6rem;
+  transition: background-color .2s ease-in-out; }
+  .nav--scrolled {
+    background-color: #bc2e3a; }
+    .nav--scrolled .nav__brand {
+      font-size: 3rem; }
+  @media only screen and (min-width: 75em) {
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5rem 9rem 3em 6.5rem; } }
+  .nav__desktop__list {
+    list-style: none;
+    display: none; }
+    @media only screen and (min-width: 75em) {
+      .nav__desktop__list {
+        display: flex; } }
+  .nav__desktop__item:not(:last-of-type) {
+    margin-right: 2rem; }
+  .nav__desktop__item:nth-child(7) {
+    margin-right: 5.5rem; }
+  .nav__desktop__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    color: #e7e7e6;
+    font-weight: 700;
+    font-size: 1.5rem; }
+  .nav__desktop__icon:not(:last-child) {
+    margin-right: 2.5rem; }
   .nav__brand {
+    display: none;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     font-size: 4rem;
-    color: rgba(255, 255, 255, 0.43); }
+    color: #e7e7e6;
+    transition: all .3s ease-in-out; }
+    @media only screen and (min-width: 75em) {
+      .nav__brand {
+        display: block; } }
   .nav__hamburger {
-    position: fixed;
-    top: 3rem;
+    position: absolute;
+    top: 2rem;
     left: 3rem;
     width: 4rem;
     background: transparent;
@@ -168,6 +209,9 @@ body {
     cursor: pointer;
     transition: all .2s;
     z-index: 1000; }
+    @media only screen and (min-width: 75em) {
+      .nav__hamburger {
+        display: none; } }
     .nav__hamburger--active .nav__hamburger__line {
       margin: 0; }
       .nav__hamburger--active .nav__hamburger__line:first-of-type {
@@ -199,6 +243,9 @@ body {
     opacity: 0;
     z-index: -1000;
     transition: all .2s ease-in-out; }
+    @media only screen and (min-width: 75em) {
+      .nav__mobile__list {
+        display: none; } }
     .nav__mobile__list--active {
       opacity: .95;
       z-index: 100;
@@ -206,7 +253,7 @@ body {
       .nav__mobile__list--active .nav__mobile__item {
         display: block; }
   .nav__mobile__item {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     display: none; }
   .nav__mobile__link {
     text-decoration: none;
@@ -249,7 +296,7 @@ body {
   .hero__main {
     display: inline-block;
     text-align: center;
-    margin-bottom: 8rem; }
+    margin-bottom: 2rem; }
     @media only screen and (min-width: 37.5em) {
       .hero__main {
         margin-bottom: 0; } }
@@ -279,13 +326,13 @@ body {
         .hero__heading--big {
           font-size: 16rem; } }
   .hero__image {
-    display: block;
+    display: none;
     margin: 0 auto;
     height: 410px;
     max-width: 400px; }
-    @media only screen and (min-width: 22em) {
+    @media only screen and (min-width: 56.25em) {
       .hero__image {
-        height: 450px; } }
+        display: block; } }
     @media only screen and (min-width: 75em) {
       .hero__image {
         margin: 0;

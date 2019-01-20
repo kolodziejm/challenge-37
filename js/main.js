@@ -1,4 +1,4 @@
-
+const navbar = document.querySelector('.nav');
 const hamburger = document.querySelector('.nav__hamburger');
 const mobileList = document.querySelector('.nav__mobile__list');
 
@@ -48,6 +48,15 @@ function switchClassesRight() {
 hamburger.addEventListener('click', function (e) {
   this.classList.toggle('nav__hamburger--active');
   mobileList.classList.toggle('nav__mobile__list--active');
+})
+
+window.addEventListener('scroll', e => {
+  const offset = window.pageYOffset;
+  if (offset >= 75) {
+    navbar.classList.add('nav--scrolled');
+  } else {
+    navbar.classList.remove('nav--scrolled');
+  }
 })
 
 carouselRightBtn.addEventListener('click', e => switchClassesLeft());
