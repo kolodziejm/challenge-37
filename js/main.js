@@ -48,16 +48,17 @@ function switchClassesRight() {
 hamburger.addEventListener('click', function (e) {
   this.classList.toggle('nav__hamburger--active');
   mobileList.classList.toggle('nav__mobile__list--active');
-})
+});
 
 window.addEventListener('scroll', e => {
   const offset = window.pageYOffset;
+  console.log('hello')
   if (offset >= 75) {
     navbar.classList.add('nav--scrolled');
   } else {
     navbar.classList.remove('nav--scrolled');
   }
-})
+});
 
 carouselRightBtn.addEventListener('click', e => switchClassesLeft());
 
