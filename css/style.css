@@ -226,14 +226,29 @@ body {
   background: url("../assets/images/hero-bg.png") no-repeat center;
   background-size: cover;
   height: 91vh; }
+  @media only screen and (min-width: 75em) {
+    .hero {
+      padding-top: 8rem;
+      padding-left: 6rem;
+      padding-bottom: 18rem; } }
+  @media only screen and (min-width: 90em) {
+    .hero {
+      padding-top: 10rem;
+      padding-left: 8rem; } }
+  @media only screen and (min-width: 110em) {
+    .hero {
+      padding-top: 12rem;
+      padding-left: 25rem; } }
   .hero__container {
     display: flex;
-    flex-direction: column; }
-  .hero__main {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative; }
+    @media only screen and (min-width: 75em) {
+      .hero__container {
+        display: block; } }
+  .hero__main {
+    display: inline-block;
+    text-align: center;
     margin-bottom: 8rem; }
     @media only screen and (min-width: 37.5em) {
       .hero__main {
@@ -245,15 +260,24 @@ body {
     -webkit-text-fill-color: rgba(255, 255, 255, 0.43);
     -webkit-background-clip: text;
     margin-bottom: 3rem; }
+    @media only screen and (min-width: 75em) {
+      .hero__text-box {
+        margin-bottom: 6.5rem; } }
   .hero__heading {
     font-family: 'LemonMilk bold', sans-serif;
     text-transform: uppercase;
     font-size: 6.5rem;
     color: transparent;
     line-height: .84; }
+    @media only screen and (min-width: 75em) {
+      .hero__heading {
+        font-size: 9rem; } }
     .hero__heading--big {
       font-size: 8rem;
       display: block; }
+      @media only screen and (min-width: 75em) {
+        .hero__heading--big {
+          font-size: 16rem; } }
   .hero__image {
     display: block;
     margin: 0 auto;
@@ -262,6 +286,27 @@ body {
     @media only screen and (min-width: 22em) {
       .hero__image {
         height: 450px; } }
+    @media only screen and (min-width: 75em) {
+      .hero__image {
+        margin: 0;
+        position: absolute;
+        max-width: 100%;
+        width: 622.5px;
+        height: 675px;
+        top: 0;
+        right: 0; } }
+    @media only screen and (min-width: 90em) {
+      .hero__image {
+        width: 664px;
+        height: 768px;
+        top: 30px;
+        right: 170px; } }
+    @media only screen and (min-width: 110em) {
+      .hero__image {
+        width: 830px;
+        height: 960px;
+        top: -40px;
+        right: 300px; } }
 
 .about {
   padding: 8rem 1rem 5rem 1rem; }
@@ -275,9 +320,9 @@ body {
   @media only screen and (min-width: 75em) {
     .about {
       background-size: 825px 710px; } }
-  @media only screen and (min-width: 93.75em) {
+  @media only screen and (min-width: 100em) {
     .about {
-      background-size: 1200px 710px; } }
+      background-size: 1100px 600px; } }
   .about__container {
     display: flex;
     flex-direction: column;

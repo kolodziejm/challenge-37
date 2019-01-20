@@ -3,16 +3,35 @@
   background-size: cover;
   height: 91vh;
 
+  @media only screen and (min-width: $desktop) {
+    padding-top: 8rem;
+    padding-left: 6rem;
+    padding-bottom: 18rem; 
+  }
+
+  @media only screen and (min-width: 90em) {
+    padding-top: 10rem;
+    padding-left: 8rem;
+  }
+
+  @media only screen and (min-width: 110em) {
+    padding-top: 12rem;
+    padding-left: 25rem;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    @media only screen and (min-width: $desktop) {
+      display: block;
+    }
   }
 
   &__main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    text-align: center;
     margin-bottom: 8rem;
     @media only screen and (min-width: $tablet-sm) {
       margin-bottom: 0;
@@ -26,6 +45,10 @@
     -webkit-text-fill-color: rgba(#fff, .43);
     -webkit-background-clip: text;
     margin-bottom: 3rem;
+
+    @media only screen and (min-width: $desktop) {
+      margin-bottom: 6.5rem;
+    }
   }
 
   &__heading {
@@ -35,9 +58,17 @@
     color: transparent;
     line-height: .84;
 
+    @media only screen and (min-width: $desktop) {
+      font-size: 9rem;
+    }
+
     &--big {
       font-size: 8rem;
       display: block;
+
+      @media only screen and (min-width: $desktop) {
+        font-size: 16rem;
+      }
     }
   }
 
@@ -49,6 +80,30 @@
 
     @media only screen and (min-width: 22em) {
       height: 450px;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      margin: 0;
+      position: absolute;
+      max-width: 100%;
+      width: 622.5px;
+      height: 675px;
+      top: 0;
+      right: 0;
+    }
+
+    @media only screen and (min-width: 90em) {
+      width: 664px;
+      height: 768px;
+      top: 30px;
+      right: 170px;
+    }
+
+    @media only screen and (min-width: 110em) {
+      width: 830px;
+      height: 960px;
+      top: -40px;
+      right: 300px;
     }
   }
 }
