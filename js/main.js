@@ -52,7 +52,6 @@ hamburger.addEventListener('click', function (e) {
 
 window.addEventListener('scroll', e => {
   const offset = window.pageYOffset;
-  console.log('hello')
   if (offset >= 75) {
     navbar.classList.add('nav--scrolled');
   } else {
